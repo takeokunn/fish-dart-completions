@@ -1,8 +1,6 @@
 # global option
-complete -c dart -s h -d "Print this usage information."
-complete -c dart -l help -d "Print this usage information."
-complete -c dart -s v -d "Show additional command output."
-complete -c dart -l verbose -d "Show additional command output."
+complete -c dart -s h -l help -d "Print this usage information."
+complete -c dart -s v -l verbose -d "Show additional command output."
 complete -c dart -l version -d "Print the Dart SDK version."
 complete -c dart -l enable-analytics -d "Enable analytics."
 complete -c dart -l disable-analytics -d "Disable analytics."
@@ -31,8 +29,7 @@ complete -c dart -n '__fish_seen_subcommand_from compile' -xa js -d 'Compile Dar
 complete -c dart -n '__fish_seen_subcommand_from compile' -xa kernel -d 'Compile Dart to a kernel snapshot.'
 
 # create
-complete -c dart -n '__fish_seen_subcommand_from create' -s t -d 'The project template to use. [console-simple (default), console-full, package-simple, server-shelf, web-simple]'
-complete -c dart -n '__fish_seen_subcommand_from create' -l template -d 'The project template to use. [console-simple (default), console-full, package-simple, server-shelf, web-simple]'
+complete -c dart -n '__fish_seen_subcommand_from create' -s t -l template -d 'The project template to use. [console-simple (default), console-full, package-simple, server-shelf, web-simple]'
 complete -c dart -n '__fish_seen_subcommand_from create' -l pub -d 'Whether to run \'pub get\' after the project has been created. (defaults to on)'
 complete -c dart -n '__fish_seen_subcommand_from create' -l no-pub -d 'Whether to run \'pub get\' after the project has been created. (defaults to on)'
 complete -c dart -n '__fish_seen_subcommand_from create' -l force -d 'Force project generation, even if the target directory already exists.'
@@ -43,12 +40,10 @@ complete -c dart -n '__fish_seen_subcommand_from fix' -l dry-run -d 'Preview the
 complete -c dart -n '__fish_seen_subcommand_from fix' -l apply -d 'Apply the proposed changes.'
 
 # format
-complete -c dart -n '__fish_seen_subcommand_from format' -s o -d 'Set where to write formatted output.'
-complete -c dart -n '__fish_seen_subcommand_from format' -l output -d 'Set where to write formatted output.'
+complete -c dart -n '__fish_seen_subcommand_from format' -s o -l output -d 'Set where to write formatted output.'
 complete -c dart -n '__fish_seen_subcommand_from format' -l set-exit-if-changed -d 'Return exit code 1 if there are any formatting changes.'
 complete -c dart -n '__fish_seen_subcommand_from format' -l fix -d 'Apply all style fixes.'
-complete -c dart -n '__fish_seen_subcommand_from format' -s l -d 'Wrap lines longer than this. (defaults to "80")'
-complete -c dart -n '__fish_seen_subcommand_from format' -l line-length -d 'Wrap lines longer than this. (defaults to "80")'
+complete -c dart -n '__fish_seen_subcommand_from format' -s l -l line-length -d 'Wrap lines longer than this. (defaults to "80")'
 
 # migrate
 complete -c dart -n '__fish_seen_subcommand_from migrate' -l apply-changes -d 'Apply the proposed null safety changes to the files on disk.'
@@ -61,8 +56,7 @@ complete -c dart -n '__fish_seen_subcommand_from migrate' -l preview-port -d 'Ru
 complete -c dart -n '__fish_seen_subcommand_from migrate' -l preview-port -d 'Output a machine-readable summary of migration changes.'
 
 # pub
-complete -c dart -n '__fish_seen_subcommand_from pub' -s C -d 'Run the subcommand in the directory<dir>.(defaults to ".")'
-complete -c dart -n '__fish_seen_subcommand_from pub' -l directory -d 'Run the subcommand in the directory<dir>.(defaults to ".")'
+complete -c dart -n '__fish_seen_subcommand_from pub' -s C -l directory -d 'Run the subcommand in the directory<dir>.(defaults to ".")'
 complete -c dart -n '__fish_seen_subcommand_from pub' -xa add -d 'Add a dependency to pubspec.yaml.'
 complete -c dart -n '__fish_seen_subcommand_from pub' -xa cache -d 'Work with the system cache.'
 complete -c dart -n '__fish_seen_subcommand_from pub' -xa deps -d 'Print package dependencies.'
@@ -93,5 +87,4 @@ complete -c dart -n '__fish_seen_subcommand_from run' -l no-pause-isolates-on-st
 complete -c dart -n '__fish_seen_subcommand_from run' -l enable-asserts -d 'Enable assert statements.'
 complete -c dart -n '__fish_seen_subcommand_from run' -l no-enable-asserts -d 'Enable assert statements.'
 complete -c dart -n '__fish_seen_subcommand_from run' -l verbosity -d 'Sets the verbosity level of the compilation.'
-complete -c dart -n '__fish_seen_subcommand_from run' -s D -d 'Define an environment declaration.'
-complete -c dart -n '__fish_seen_subcommand_from run' -l define -d 'Define an environment declaration.'
+complete -c dart -n '__fish_seen_subcommand_from run' -s D -l define -d 'Define an environment declaration.'
